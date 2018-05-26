@@ -1,5 +1,5 @@
-#ifndef RECYCLE_SRC_STUB_FACILITY_H_
-#define RECYCLE_SRC_STUB_FACILITY_H_
+#ifndef RECYCLE_SRC_STUBFACILITY_H_
+#define RECYCLE_SRC_STUBFACILITY_H_
 
 #include "cyclus.h"
 #include "recycle_version.h"
@@ -34,7 +34,7 @@ cyclus::Material::Ptr SepMaterial(std::map<int, double> effs,
 /// reduce its stocks by trading and hits this limit for any of its output
 /// streams, further processing/separations of feed material will halt until
 /// room is again available in the output streams.
-class StubFacility 
+class StubFacility
   : public cyclus::Facility,
     public cyclus::toolkit::Position {
 #pragma cyclus note { \
@@ -292,6 +292,6 @@ class StubFacility
   void RecordPosition();
 };
 
-}  // namespace cycamore
+}  // namespace recycle
 
-#endif  // CYCAMORE_SRC_SEPARATIONS_H_
+#endif  // RECYCLE_SRC_STUBFACILITY_H_
